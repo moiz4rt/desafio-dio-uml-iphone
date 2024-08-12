@@ -34,6 +34,8 @@ classDiagram
     class ReprodutorMusical {
         +tocar()
         +pausar()
+        +anterior()
+        +proxima()
         +selecionarMusica(String musica)
     }
 
@@ -52,7 +54,6 @@ classDiagram
     class iPhone {
     }
 
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
-
+    AparelhoTelefonico <|-- IPhone
+    ReprodutorMusical <|.. IPhone
+    NavegadorInternet <|.. IPhone
